@@ -1,10 +1,12 @@
 import os
+import errno
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from calculate_stats import CalculateStats
 
 DATASET_PATH = '../datasets/train.csv'
+MODELS_DIR = '../models'
 
 def clean_data(path):
 	data_frame = pd.read_csv(path)
@@ -43,20 +45,26 @@ def split_data(path):
 	return paths
 
 
-def train_models(x_train, x_test, y_train, y_test):
-	pass
+def train_models(features_path, labels_path):
+	models_paths = []
+
+	return models_paths
 
 
-def compare_results():
+def compare_results(models_paths, test_features, test_labels):
 	pass
 
 
 def main():
+
+	if not os.path.isfile(DATASET_PATH):
+		raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), DATASET_PATH)
+
 	CalculateStats(DATASET_PATH)
 	clean_data_path = clean_data(DATASET_PATH)
-	paths = split_data(clean_data_path)	
-	train_models(*paths)
-	compare_results()
+	train_features, test_feature, train_labels, test_labels  = split_data(clean_data_path)	
+	models_paths = train_models(train_features, train_labels)
+	compare_results(models_paths, test_feature, test_labels)
 
 
 if __name__ == "__main__":
