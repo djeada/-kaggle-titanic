@@ -59,9 +59,10 @@ def main():
 
 	if not os.path.isfile(DATASET_PATH):
 		raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), DATASET_PATH)
-
-	CalculateStats(DATASET_PATH)
+	
 	clean_data_path = clean_data(DATASET_PATH)
+
+	CalculateStats(clean_data_path)
 	train_features, test_feature, train_labels, test_labels  = split_data(clean_data_path)	
 	models_paths = train_models(train_features, train_labels)
 	compare_results(models_paths, test_feature, test_labels)
