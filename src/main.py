@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from calculate_stats import CalculateStats
+from linear_regression import LinearRegression
 
 DATASET_PATH = '../datasets/train.csv'
 MODELS_DIR = '../models'
@@ -47,6 +48,9 @@ def split_data(path):
 
 def train_models(features_path, labels_path):
 	models_paths = []
+
+	linear_regression = LinearRegression(MODELS_DIR, features_path, labels_path)
+	models_paths.append(linear_regression.get_path())
 
 	return models_paths
 
