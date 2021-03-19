@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 
 from calculate_stats import CalculateStats
 from linear_regression import LinearRegression
+from logisitic_regression import LogisticRegression
 
 DATASET_PATH = '../datasets/train.csv'
 MODELS_DIR = '../models'
@@ -46,13 +47,9 @@ def split_data(path):
 	return paths
 
 
-def train_models(features_path, labels_path):
-	models_paths = []
+def train_models(models, path, features_path, labels_path):
 
-	linear_regression = LinearRegression(MODELS_DIR, features_path, labels_path)
-	models_paths.append(linear_regression.get_path())
-
-	return models_paths
+	return [model(path, features_path, labels_path).get_path() for model in models]
 
 
 def compare_results(models_paths, test_features, test_labels):
@@ -68,8 +65,10 @@ def main():
 
 	CalculateStats(clean_data_path)
 	train_features, test_feature, train_labels, test_labels  = split_data(clean_data_path)	
-	models_paths = train_models(train_features, train_labels)
-	compare_results(models_paths, test_feature, test_labels)
+	
+	models = [LinearRegression, LogisticRegression]
+	results_paths = train_models(models, MODELS_DIR, train_features, train_labels)
+	compare_results(results_paths, test_feature, test_labels)
 
 
 if __name__ == "__main__":
