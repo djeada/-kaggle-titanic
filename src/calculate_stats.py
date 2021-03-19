@@ -31,7 +31,7 @@ class CalculateStats():
 		survivors_num = (data == 1).sum()
 		deceased_num = (data == 0).sum()
 
-		labels = ['']
+		labels = ['Survivors vs Deceased']
 
 		x = np.arange(len(labels))
 		width = 0.5
@@ -41,9 +41,10 @@ class CalculateStats():
 		rects2 = ax.bar(x + width/2, [deceased_num], width, label='Deceased')
 
 		ax.set_ylabel('Number of people')
-		ax.set_title('Survivors vs Deceased')
+		ax.set_title('Survivability - general')
 		ax.set_xticks(x)
 		ax.set_xticklabels(labels)
+		ax.set_ylim([None, 1.1*max(survivors_num, deceased_num)])		
 		ax.legend()
 
 
@@ -67,10 +68,10 @@ class CalculateStats():
 		survived_females = 0
 
 		for survived, sex in zip(survivors_data, gender_data):
-			if survived and sex == 'male':
+			if survived and sex == 0:
 				survived_males += 1
 
-			elif survived and sex == 'female':
+			elif survived and sex == 1:
 				survived_females += 1
 
 		deceased_males = males_num - survived_males
@@ -89,6 +90,7 @@ class CalculateStats():
 		ax.set_title('Survivability by gender')
 		ax.set_xticks(x)
 		ax.set_xticklabels(labels)
+		ax.set_ylim([None, 1.1*max(survived_males, survived_females, deceased_males, deceased_females)])		
 		ax.legend()
 
 		percentage_1 = [int(survived_males*100/(males_num)), int(survived_females*100/(females_num))]
@@ -127,19 +129,23 @@ class CalculateStats():
 		deceased_second_class = second_class_total - survived_second_class
 		deceased_third_class = third_class_total - survived_third_class
 
-		labels = ['1', '2', '3']
+
+		survived_by_class = [survived_first_class, survived_second_class, survived_third_class]
+		deceased_by_class = [deceased_first_class, deceased_second_class, deceased_third_class]
+		labels = ['First class', 'Second class', 'Third class']
 
 		x = np.arange(len(labels))
 		width = 0.45
 
 		fig, ax = plt.subplots()
-		rects1 = ax.bar(x - width/2, [survived_first_class, survived_second_class, survived_third_class], width, label='Survivors')
-		rects2 = ax.bar(x + width/2, [deceased_first_class, deceased_second_class, deceased_third_class], width, label='Deceased')
+		rects1 = ax.bar(x - width/2, survived_by_class, width, label='Survivors')
+		rects2 = ax.bar(x + width/2, deceased_by_class, width, label='Deceased')
 
 		ax.set_ylabel('Number of people')
 		ax.set_title('Survivability by class')
 		ax.set_xticks(x)
 		ax.set_xticklabels(labels)
+		ax.set_ylim([None, 1.1*max(max(survived_by_class), max(deceased_by_class))])		
 		ax.legend()
 
 		percentage_1 = [int(survived_first_class*100/(first_class_total)), int(survived_second_class*100/(second_class_total)), int(survived_third_class*100/(third_class_total))]
