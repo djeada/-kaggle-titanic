@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from calculate_stats import CalculateStats
 from linear_regression import LinearRegression
 from logisitic_regression import LogisticRegression
+from multilayer_perceptron import MultilayerPerceptron
 
 DATASET_PATH = '../datasets/train.csv'
 MODELS_DIR = '../models'
@@ -66,7 +67,7 @@ def main():
 	CalculateStats(clean_data_path)
 	train_features, test_feature, train_labels, test_labels  = split_data(clean_data_path)	
 	
-	models = [LinearRegression, LogisticRegression]
+	models = [LinearRegression, LogisticRegression, MultilayerPerceptron]
 	results_paths = train_models(models, MODELS_DIR, train_features, train_labels)
 	compare_results(results_paths, test_feature, test_labels)
 
