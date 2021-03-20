@@ -54,11 +54,26 @@ Passengers from higher classes had significantly better chances at surviving.
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/survivability_by_age.png)
 
-
+For almost
 
 <h1>Chosen models</h1>
 
+Following models were chosen:
+
+<h2> Linear Regression </h2>
+
+<h2> Logistic Regression </h2>
+
+<h2> Multilayer Perceptron </h2>
+
+<h2> Random Forest </h2>
+
+<h2> Support Vector Machine </h2>
+
+<h2> Gradient Boosting </h2>
 
 <h1>Results</h1>
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/model_comparison.png)
+
+Satisfactory results were achieved for all chosen models.111
