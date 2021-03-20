@@ -19,6 +19,7 @@ from gradient_boosting import GradientBoosting
 
 DATASET_PATH = '../datasets/train.csv'
 MODELS_DIR = '../models'
+RESOURCES_PATH = '../resources/'
 
 def render_mpl_table(data, col_width=3.0, row_height=0.625, font_size=14,
                      header_color='#40466e', row_colors=['#f1f1f2', 'w'], edge_color='w',
@@ -121,7 +122,7 @@ def main():
 	
 	models = [LinearRegression, LogisticRegression, MultilayerPerceptron, RandomForest, SVM, GradientBoosting]
 	results_paths = train_models(models, MODELS_DIR, train_features, train_labels)
-	compare_results(results_paths, os.path.dirname(DATASET_PATH), test_feature, test_labels)
+	compare_results(results_paths, RESOURCES_PATH, test_feature, test_labels)
 
 
 if __name__ == "__main__":
