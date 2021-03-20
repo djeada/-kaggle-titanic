@@ -54,7 +54,7 @@ Passengers from higher classes had significantly better chances at surviving.
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/survivability_by_age.png)
 
-For almost
+For almost all age intervals number of deceased was greater than number of survivors.
 
 <h1>Chosen models</h1>
 
@@ -76,4 +76,4 @@ Following models were chosen:
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/model_comparison.png)
 
-Satisfactory results were achieved for all chosen models.111
+Satisfactory results were achieved for all chosen models.
