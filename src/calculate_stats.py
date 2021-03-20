@@ -4,16 +4,6 @@ from matplotlib import pyplot as plt
 
 RESOURCES_PATH = '../resources/'
 
-def autolabel(ax, rects, percentages, font_size=14):
-
-	for i, rect in enumerate(rects):
-		height = rect.get_height()
-		ax.annotate('{}%'.format(percentages[i]),
-			xy=(rect.get_x() + rect.get_width() / 2, height),
-			xytext=(0, 3),
-			textcoords='offset points',
-			ha='center', va='bottom', fontsize=font_size)
-
 
 class CalculateStats():
 	def __init__(self, path):
@@ -51,8 +41,8 @@ class CalculateStats():
 		percentage_1 = [int(survivors_num*100/(survivors_num + deceased_num))]
 		percentage_2 = [int(deceased_num*100/(survivors_num + deceased_num))]
 
-		autolabel(ax, rects1, percentage_1)
-		autolabel(ax, rects2, percentage_2)
+		CalculateStats.autolabel(ax, rects1, percentage_1)
+		CalculateStats.autolabel(ax, rects2, percentage_2)
 
 		fig.tight_layout()
 		plt.savefig(RESOURCES_PATH + 'survivors_vs_deceased.png')
@@ -96,8 +86,8 @@ class CalculateStats():
 		percentage_1 = [int(survived_males*100/(males_num)), int(survived_females*100/(females_num))]
 		percentage_2 = [int(deceased_males*100/(males_num)), int(deceased_females*100/(females_num))]
 
-		autolabel(ax, rects1, percentage_1)
-		autolabel(ax, rects2, percentage_2)
+		CalculateStats.autolabel(ax, rects1, percentage_1)
+		CalculateStats.autolabel(ax, rects2, percentage_2)
 
 		fig.tight_layout()
 		plt.savefig(RESOURCES_PATH + 'survivability_by_gender.png')
@@ -151,8 +141,8 @@ class CalculateStats():
 		percentage_1 = [int(survived_first_class*100/(first_class_total)), int(survived_second_class*100/(second_class_total)), int(survived_third_class*100/(third_class_total))]
 		percentage_2 = [int(deceased_first_class*100/(first_class_total)), int(deceased_second_class*100/(second_class_total)), int(deceased_third_class*100/(third_class_total))]
 
-		autolabel(ax, rects1, percentage_1)
-		autolabel(ax, rects2, percentage_2)
+		CalculateStats.autolabel(ax, rects1, percentage_1)
+		CalculateStats.autolabel(ax, rects2, percentage_2)
 
 		fig.tight_layout()
 		plt.savefig(RESOURCES_PATH + 'survivability_by_class.png')
@@ -210,12 +200,21 @@ class CalculateStats():
 		percentages_1 = [int(survivors_for_age_interval[age_interval]*100/total) for age_interval, total in total_for_age_interval.items()]
 		percentages_2 = [int(deceased_for_age_interval[age_interval]*100/total) for age_interval, total in total_for_age_interval.items()]
 		
-		autolabel(ax, rects1, percentages_1, 10)
-		autolabel(ax, rects2, percentages_2, 10)
+		CalculateStats.autolabel(ax, rects1, percentages_1, 10)
+		CalculateStats.autolabel(ax, rects2, percentages_2, 10)
 
 		fig.tight_layout()
 		plt.savefig(RESOURCES_PATH + 'survivability_by_age.png')
-	
 
-	
+
+	@staticmethod
+	def autolabel(ax, rects, percentages, font_size=14):
+
+		for i, rect in enumerate(rects):
+			height = rect.get_height()
+			ax.annotate('{}%'.format(percentages[i]),
+				xy=(rect.get_x() + rect.get_width() / 2, height),
+				xytext=(0, 3),
+				textcoords='offset points',
+				ha='center', va='bottom', fontsize=font_size)
 
