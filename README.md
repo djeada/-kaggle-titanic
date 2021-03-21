@@ -54,7 +54,7 @@ Passengers from higher classes had significantly better chances at surviving.
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/survivability_by_age.png)
 
-For almost all age intervals the number of deceased was greater than the number of survivors. On the side note, wec coud see that the number of people vs age distribution has a bell shape. That observation is consistent with the central limit theorem.
+For almost all age intervals the number of deceased was greater than the number of survivors. On the side note, we can see that the number of people vs age distribution has a bell shape. That observation is consistent with the central limit theorem.
 
 <h1>Chosen models</h1>
 
