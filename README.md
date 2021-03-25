@@ -30,8 +30,11 @@ python3 main.py
 ```
 <h1>Cleaning Data</h1>
 
+Following steps had been taken:
+
 - Converting non-numeric data to 1's and 0's.
-- Filling missing values in Age column.
+- Filling missing values in <i>Age</i> column with the mean.
+- Disregarding random features. <i>Cabin</i>, <i>Embarked</i>, <i>Name</i> and <i>Ticket</i> are not important in predicting preson's chances of surviving.
 
 <h1>General Statistics</h1>
 It is always a good idea to take a look at some basic statistics before using any machine learning. Some trends in the data might be obvious and could help us later in understanding predictions of different machine learning algorithms.
