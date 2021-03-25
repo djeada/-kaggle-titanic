@@ -28,6 +28,10 @@ pip3 install -r requirements.txt
 cd src
 python3 main.py
 ```
+<h1>Cleaning Data</h1>
+
+- Converting non-numeric data to 1's and 0's.
+- Filling missing values in Age column.
 
 <h1>General Statistics</h1>
 It is always a good idea to take a look at some basic statistics before using any machine learning. Some trends in the data might be obvious and could help us later in understanding predictions of different machine learning algorithms.
