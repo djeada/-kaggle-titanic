@@ -17,7 +17,7 @@ Exemplary solution to Kaggle's Data Science competition: Titanic - Machine Learn
 
 Follow the steps:
 
-- Download this repository: ```bash git clone https://github.com/agconti/kaggle-titanic.git```
+- Download this repository: ```bash git clone https://github.com/djeada/kaggle-titanic.git```
 - Install <i>virtualenv</i>.
 - Open the terminal in the project directory and run following commands:
 
