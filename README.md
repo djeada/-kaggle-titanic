@@ -88,11 +88,12 @@ Creates a tree ensemble that votes on the final forecast.
 By maximizing the margin between the hyperplane and the nearest data points of any class, data is separated into two classes.
 
 <h2> Gradient Boosting </h2>
-Gradient descent is used to train sequential models by minimizing a given loss function at each phase. 
+Gradient descent is used to train sequential models by minimizing a given loss function at each phase.
+
 1. Begin by estimating the response's average value. 
-2. Build a tree out of the errors, limited by depth or the number of leaf nodes. 
-3. Use a constant learning rate to scale decision trees. 
-4. Keep practicing and weighting decision trees until they reach a point of convergence.
+1. Build a tree out of the errors, limited by depth or the number of leaf nodes. 
+1. Use a constant learning rate to scale decision trees. 
+1. Keep practicing and weighting decision trees until they reach a point of convergence.
 
 <h1>Results</h1>
 
