@@ -69,15 +69,30 @@ Following models were chosen:
 
 <h2> Linear Regression </h2>
 
+Explanatory variables and a continuous response are modelled as linear relationships.
+
 <h2> Logistic Regression </h2>
+
+The probability that Y belongs to a binary class is expected (1 or 0). Fits the data to a logistic (sigmoid) function that maximizes the probability that the observations will follow the curve. In the exponent, regularization may be applied.
 
 <h2> Multilayer Perceptron </h2>
 
+To get to an output, it feeds inputs through various hidden layers and relies on weights and nonlinear functions.
+
 <h2> Random Forest </h2>
+
+Creates a tree ensemble that votes on the final forecast.
 
 <h2> Support Vector Machine </h2>
 
+By maximizing the margin between the hyperplane and the nearest data points of any class, data is separated into two classes.
+
 <h2> Gradient Boosting </h2>
+Gradient descent is used to train sequential models by minimizing a given loss function at each phase. 
+1. Begin by estimating the response's average value. 
+2. Build a tree out of the errors, limited by depth or the number of leaf nodes. 
+3. Use a constant learning rate to scale decision trees. 
+4. Keep practicing and weighting decision trees until they reach a point of convergence.
 
 <h1>Results</h1>
 
