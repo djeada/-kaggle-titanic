@@ -99,4 +99,4 @@ Gradient descent is used to train sequential models by minimizing a given loss f
 
 ![alt text](https://github.com/djeada/kaggle-titanic/blob/main/resources/model_comparison.png)
 
-Overall <i>Random Forest</i> had won in all categories, except for latency. However satisfactory results were achieved for all chosen models.
+Except for latency, <i>Random Forest</i> had won in every category. All of the chosen models, however, produced satisfactory results.
