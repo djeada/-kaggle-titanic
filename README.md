@@ -81,7 +81,7 @@ To get to an output, it feeds inputs through various hidden layers and relies on
 
 <h2> Random Forest </h2>
 
-Creates a tree ensemble that votes on the final forecast.
+Creates multiple decision trees and merges them to produce a more accurate and stable prediction.
 
 <h2> Support Vector Machine </h2>
 
