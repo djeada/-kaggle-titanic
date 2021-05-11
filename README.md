@@ -73,7 +73,7 @@ Explanatory variables and a continuous response are modelled as linear relations
 
 <h2> Logistic Regression </h2>
 
-The probability that Y belongs to a binary class is expected (1 or 0). Fits the data to a logistic (sigmoid) function that maximizes the probability that the observations will follow the curve. In the exponent, regularization may be applied.
+Y belongs to a binary class, i.e. it can only be 1 or 0. The algorithm fits the data to a logistic (sigmoid) function that maximizes the probability that the observations will follow the curve. In the exponent, regularization may be applied.
 
 <h2> Multilayer Perceptron </h2>
 
@@ -85,7 +85,7 @@ Creates multiple decision trees and merges them to produce a more accurate and s
 
 <h2> Support Vector Machine </h2>
 
-By maximizing the margin between the hyperplane and the nearest data points of any class, data is separated into two classes.
+Data is separated into two classes by maximizing the margin between the hyperplane and the nearest data points of any class.
 
 <h2> Gradient Boosting </h2>
 Gradient descent is used to train sequential models by minimizing a given loss function at each phase.
