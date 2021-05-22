@@ -1,10 +1,10 @@
-All contributions are welcome.
+Any and all contributions are appreciated.
 
-By clicking the fork button at the top of this list, you can fork this repository. This will duplicate the repository in your account.
+You can fork this repository by pressing the fork button at the top of the page.  This will duplicate the repository in your account.
 
-Now you can clone the forked repository to your computer.
+You can now clone the forked archive on your local machine.
 
-Open a terminal and run the following git command:
+Run the following git command in a terminal:
 
 ```bash
 git clone https://github.com/djeada/kaggle-titanic.git
@@ -18,7 +18,7 @@ Now use the git checkout command to create a new branch:
 git checkout -b your-new-branch-name
 ```
 
-Make your changes and then push them to the repo.
+Once you've made the updates, push them to the repository.
 
 ```bash
 git add file
@@ -26,4 +26,4 @@ git commit -m "your commit message"
 git push origin <your-new-branch-name>
 ```
 
-Now go to the github website and create a Pull request in your forked repo.
+Now go to the github website and create a Pull request in your forked repository.
