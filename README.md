@@ -1,7 +1,7 @@
 # Kaggle-Titanic
 Exemplary solution to Kaggle's Data Science competition: Titanic - Machine Learning from Disaster.
 
-![Capture](https://user-images.githubusercontent.com/37275728/186236919-319e8b87-8087-4b61-83ff-bfad0f0c3eb7.PNG)
+![Capture](https://user-images.githubusercontent.com/37275728/186237499-f7436ca6-7241-41b6-b4b8-f5d3e9648311.PNG)
 
 ## Introduction
 
