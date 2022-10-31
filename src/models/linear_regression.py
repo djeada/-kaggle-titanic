@@ -1,5 +1,7 @@
 import joblib
 import os
+
+import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression as LR
 from sklearn.model_selection import GridSearchCV
@@ -40,7 +42,9 @@ class LinearRegression(BaseModel):
         :param x: The input data.
         :return: The predicted labels.
         """
-        return self.model.predict(x)
+        raw_predictions = self.model.predict(x)
+        # if greater than 0.5, predict 1, else 0
+        return np.array([1 if p > 0.5 else 0 for p in raw_predictions])
 
     def save(self, path):
         """

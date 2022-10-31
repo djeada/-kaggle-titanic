@@ -80,7 +80,7 @@ def main():
     for model in models:
         print(f"Testing {model.__class__.__name__}...")
         predictions = model.predict(dataset_split.test_x)
-        accuracy = accuracy_score(dataset_split.test_y, predictions)
+        accuracy = accuracy_score(dataset_split.test_y.to_numpy(), predictions)
         precision = precision_score(dataset_split.test_y, predictions)
         recall = recall_score(dataset_split.test_y, predictions)
         scores[model.__class__.__name__] = {
