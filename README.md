@@ -1,7 +1,7 @@
-# Kaggle-Titanic
-Exemplary solution to Kaggle's Data Science competition: Titanic - Machine Learning from Disaster.
+# Kaggle Titanic
+An exemplary solution for Kaggle's Data Science competition: Titanic - Machine Learning from Disaster.
 
-This is a binary classification issue in which we forecast whether or not Titanic passengers survived. 
+This binary classification problem involves predicting whether Titanic passengers survived based on various features.
 
 ![Capture](https://user-images.githubusercontent.com/37275728/186237499-f7436ca6-7241-41b6-b4b8-f5d3e9648311.PNG)
 
